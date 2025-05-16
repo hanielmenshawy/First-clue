@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Clue 1</title>
   <style>
     body {
@@ -72,6 +72,9 @@
 
     .qr-code img {
       width: 200px;
+      border: 2px solid #e2e2e2;
+      padding: 5px;
+      box-shadow: 0 0 10px #666;
     }
   </style>
 </head>
@@ -90,18 +93,18 @@
   </div>
 
   <div>
-    <input type="text" id="answer" placeholder="Enter your answer...">
+    <input type="text" id="answer" placeholder="Enter your answer..." />
     <button onclick="checkAnswer()">Submit</button>
   </div>
 
   <div class="qr-code" id="qr">
     <p>Correct! Here's your next clue:</p>
-    <img src="next-qr.png" alt="Next QR Code">
+    <img src="clue2-qr.png" alt="Next QR Code" />
   </div>
 
   <script>
     function checkAnswer() {
-      const userAnswer = document.getElementById("answer").value.trim();
+      const userAnswer = document.getElementById("answer").value.trim().toUpperCase();
       const correctAnswer = "14";
 
       if (userAnswer === correctAnswer) {
